@@ -1,150 +1,162 @@
-Project Description
-The "Mobile Shop Automation Testing" project focuses on automating the testing of key functionalities of the mobile phone section on the anhoch.mk e-commerce website.
-Using Selenium WebDriver with C# and NUnit, the goal is to simulate user actions such as searching for phones, filtering by brand, and adding products to the shopping cart.
+# 🧪 Mobile Shop Automation Testing
 
-The project follows Agile principles, with tasks organized into short sprints based on user stories. This approach ensures continuous improvement, quick feedback, and early detection of issues during the development cycle.
+This project focuses on automating the testing of the mobile phone section on the [anhoch.mk](https://www.anhoch.mk) e-commerce website using Selenium WebDriver with C# and NUnit.
 
-Project Objective
-The objective of this project is to develop an automated test suite for verifying the key user interactions on the mobile phone section of the anhoch.mk website, ensuring that critical functionalities like search, filtering, and adding products to the cart work as expected.
+---
 
-Scope
-What will be tested:
-Search Functionality:
+## 🎯 Project Objective
 
-Verify that the search bar correctly filters mobile phones based on the query (e.g., phone model, brand).
-Filtering by Brand:
+To build a robust automated test suite that verifies the core user interactions on the mobile phone section, including:
 
-Ensure that when a brand is selected from the filter options, only phones from that specific brand are displayed.
-Adding to Cart:
+- Searching for phones
+- Filtering by brand
+- Viewing product details
+- Adding products to the cart
+- Ensuring mobile responsiveness
 
-Verify that selecting a phone and clicking "Add to cart" results in the product being added to the shopping cart.
-Product Details:
+---
 
-Ensure that product details (e.g., price, specifications, availability) are correctly displayed on the product page.
-Mobile Responsiveness:
+## 🧱 Project Scope
 
-Check that the mobile phone section works correctly on various screen sizes (desktop, tablet, and mobile).
-What will not be tested:
-Payment Gateway:
+### ✅ What Will Be Tested:
+- **Search Functionality**: Validates correct filtering based on search input (e.g. “iPhone”).
+- **Brand Filtering**: Displays only products from selected brand.
+- **Add to Cart**: Adds a phone to the shopping cart correctly.
+- **Product Details**: Displays correct price, specs, and availability.
+- **Mobile Responsiveness**: Works correctly on mobile, tablet, and desktop views.
 
-The payment functionality is not included in the scope of this project.
-User Registration & Login:
+### ❌ What Will Not Be Tested:
+- Payment and checkout processes
+- User registration & login
+- External services (e.g. payment gateways, delivery)
+- Non-mobile product categories
 
-Testing of user authentication (registration, login) is out of scope.
-External Services:
+---
 
-External integrations (e.g., third-party payment processors, delivery services) are not part of the test plan.
-Non-Mobile Sections:
+## 🧪 Test Plan
 
-Testing will focus solely on the mobile phones section, not other product categories or the checkout process.
-Test Plan
-Objective:
-The objective of this test plan is to ensure that all critical functionalities related to mobile phone search, filtering, and cart addition work as expected on the anhoch.mk website.
+### 🎯 Objective
+Ensure that all critical functionalities in the mobile phones section work as expected.
 
-Scope:
-Testing will be focused on the mobile phone section of the website.
-The following functionalities will be tested: search, brand filtering, adding products to the cart, and mobile responsiveness.
-Approach:
-Automation:
-Selenium WebDriver with C# will be used for automating the test cases.
-Test Environment:
-Tests will be executed in Google Chrome using the ChromeDriver.
-Test Data:
-A set of predefined phone models and brands will be used for testing search and filtering.
-Pass/Fail Criteria:
-Tests will be considered successful if the expected outcome matches the actual behavior of the website.
-Test Cases
-Test Case 1: Verify Search Functionality
-Precondition:
-The mobile phone section is displayed.
+### 🧪 Testing Approach
+- **Tool:** Selenium WebDriver
+- **Language:** C#
+- **Framework:** NUnit
+- **Execution:** Google Chrome using ChromeDriver
+- **Test Data:** Predefined models and brands
+- **CI:** Azure DevOps integration
 
-Test Steps:
+---
 
-Enter a search term (e.g., "iPhone").
-Click the search button.
-Expected Result:
-The search results display only products related to "iPhone" (e.g., different iPhone models).
+## ✅ Test Cases
 
-Pass/Fail Criteria:
-Test is passed if only relevant phones appear in the search results.
+### 🔍 Test Case 1: Search Functionality
+- **Steps:** Enter "iPhone" > Click search
+- **Expected Result:** Only iPhone models are displayed
+- **Status:** ✅ Passed if relevant phones appear
 
-Test Case 2: Verify Filter by Brand
-Precondition:
-The mobile phone section is displayed.
+### 🏷 Test Case 2: Filter by Brand
+- **Steps:** Select "Samsung" from filter
+- **Expected Result:** Only Samsung phones are shown
+- **Status:** ✅ Passed if brand filter works
 
-Test Steps:
+### 🛒 Test Case 3: Add to Cart
+- **Steps:** Click "Add to Cart" on a phone
+- **Expected Result:** Product appears in the cart
+- **Status:** ✅ Passed if cart is updated
 
-Select a brand (e.g., "Samsung") from the filter options.
-Wait for the page to load filtered results.
-Expected Result:
-Only phones from the selected brand ("Samsung") are displayed.
+### 📱 Test Case 4: Mobile Responsiveness
+- **Steps:** Open site in mobile view / device
+- **Expected Result:** UI adjusts, all actions accessible
+- **Status:** ✅ Passed if responsive
 
-Pass/Fail Criteria:
-Test is passed if only Samsung phones appear in the results.
+---
 
-Test Case 3: Verify Add to Cart Functionality
-Precondition:
-The mobile phone section is displayed with available products.
+## 🔁 Test Execution & Results
 
-Test Steps:
+- **Execution Tool:** NUnit Console Runner / Visual Studio
+- **CI/CD:** Azure DevOps Pipelines
+- **Browser:** Google Chrome
+- **Trigger:** Executed on every push/change
 
-Select a mobile phone.
-Click the "Add to Cart" button.
-Expected Result:
-The selected phone is added to the cart.
+### 📝 Results:
+- ✅ **Pass:** Feature works as expected
+- ❌ **Fail:** Bug logged in Azure DevOps with screenshots/logs
 
-Pass/Fail Criteria:
-Test is passed if the product appears in the shopping cart.
+---
 
-Test Case 4: Verify Mobile Responsiveness
-Precondition:
-The mobile phone section is displayed.
+## ⚙️ Automation Strategy
 
-Test Steps:
+- **Framework:** Selenium WebDriver + NUnit
+- **Design Pattern:** Page Object Model (POM)
+- **Data-driven Tests:** NUnit parameterized tests
+- **CI:** Integrated with Azure DevOps
+- **Reporting:** NUnit test reports and logs
+- **Logging:** Basic logs for debugging
 
-Open the website on a mobile device or resize the browser window to mobile view.
-Check that the page elements adjust appropriately.
-Expected Result:
-The page should display correctly and all functionalities should be accessible on mobile devices.
+---
 
-Pass/Fail Criteria:
-Test is passed if the mobile phone section is fully responsive on mobile view.
+## 🛠 Tools & Technologies
 
-Test Execution & Results
-Execution:
-The automated test suite will be executed using NUnit, in combination with Selenium WebDriver, in the following environment:
+| Tool          | Purpose                         |
+|---------------|---------------------------------|
+| Selenium      | UI automation                   |
+| C#            | Programming language            |
+| NUnit         | Test framework                  |
+| Azure DevOps  | CI/CD pipeline and issue tracking |
+| ChromeDriver  | Browser automation              |
 
-Browser: Google Chrome
-Test Framework: NUnit
-Automation Tool: Selenium WebDriver
-Environment: Local environment or Azure DevOps pipeline for continuous integration.
-Tests will be run after each significant change in the code to ensure that all critical functionalities work as expected.
+---
 
-Results:
-Test results will be collected and presented through NUnit’s test report generation. The following actions will be taken based on the test results:
+## 📁 Project Structure (Sample)
 
-Pass: The feature is working as expected.
-Fail: Further investigation will be required to identify the root cause of the failure. The issue will be logged as a bug in the Azure DevOps work item system.
-Automation Strategy
-Framework:
-The automated testing will be implemented using Selenium WebDriver with C# and NUnit. This combination allows for efficient and scalable test automation with the following advantages:
+MobileShopTests/
+├── Pages/
+│ ├── HomePage.cs
+│ ├── SearchPage.cs
+│ └── CartPage.cs
+├── Tests/
+│ ├── SearchTests.cs
+│ ├── FilterTests.cs
+│ └── CartTests.cs
+├── Utilities/
+│ ├── TestBase.cs
+│ └── Config.cs
+├── README.md
+└── .gitignore
 
-Cross-browser testing: Ensures compatibility across different browsers (primarily Chrome for execution).
-Data-driven testing: Enables testing with different sets of data using NUnit’s parameterized tests.
-Continuous Integration (CI): Integration with Azure DevOps pipelines ensures that tests run automatically with each code commit.
-Test Design:
-Test Scripts: Test cases will be written as reusable test scripts.
-Modular Approach: Page Object Model (POM) design pattern will be followed for better maintainability and reusability of code.
-Logging & Reporting: Logs will be maintained for debugging, and test results will be generated after each execution. Detailed reports will be available in the Azure DevOps dashboard.
-Tools & Technologies
-Selenium WebDriver:
-Selenium WebDriver is used for automating browser interactions. It allows simulating user actions like clicking, typing, and navigating through the website.
 
-C#:
-The test scripts will be written in C# to integrate with Selenium WebDriver, providing strong support for automation tasks and ease of integration into the DevOps pipeline.
+---
 
-NUnit:
-NUnit is a unit testing framework for .NET applications, used to structure the test cases and provide reporting for the automated tests.
+## 👨‍💻 How to Run
 
-Azure DevOps:
-Azure DevOps will be used for project management, tracking progress, and running automated tests through CI/CD pipelines.
+# Clone the repo
+git clone https://github.com/hristeski/Automation-Testing-Project-Anhoch.git
+
+# Navigate to the project directory
+cd Automation-Testing-Project-Anhoch
+
+# Run tests via Visual Studio or terminal:
+dotnet test
+
+✅ Prerequisites
+.NET SDK 7.0 or higher
+
+Visual Studio 2022 or newer with .NET and Test Tools installed
+Chrome WebDriver that matches your local Chrome version
+
+⚙️ Configuration (Optional)
+WebDriver Path: Ensure ChromeDriver is added to your system's PATH, or install it via NuGet (Selenium.WebDriver.ChromeDriver).
+Base URL for tests: Make sure your test environment URL is correctly set within the test setup or a config file (appsettings.json, TestContext, etc.).
+
+Azure DevOps CI/CD: If using pipelines, include the following steps:
+dotnet restore
+dotnet build
+dotnet test
+
+🧪 Run Tests
+Run all tests in the project using:
+dotnet test --logger "console;verbosity=detailed"
+
+
+
