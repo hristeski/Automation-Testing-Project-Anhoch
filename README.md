@@ -140,7 +140,7 @@ cd Automation-Testing-Project-Anhoch
 dotnet test
 
 ✅ Prerequisites
-.NET SDK 7.0 or higher
+.NET SDK 9.0 or higher
 
 Visual Studio 2022 or newer with .NET and Test Tools installed
 Chrome WebDriver that matches your local Chrome version
